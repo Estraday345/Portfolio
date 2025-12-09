@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es" class="dark:bg-gray-900 dark:text-gray-100">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portafolio - José Guadalupe Estrada López</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <style>
+    /* Parallax Background */
+    .parallax {
+      background-image: url('images/prog.jpg');
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
+    }
+    /* Loader */
+    #loader {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: white;
+      z-index: 9999;
+    }
+    .loader-dot {
+      width: 12px; height: 12px;
+      background: #2563eb;
+      border-radius: 50%;
+      margin: 0 6px;
+      animation: bounce 0.6s infinite alternate;
+    }
+    .loader-dot:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+    .loader-dot:nth-child(3) {
+      animation-delay: 0.4s;
+    }
+    @keyframes bounce {
+      to { transform: translateY(-10px); }
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-gray-100">
+
+  <!-- LOADER -->
+  <div id="loader">
+    <div class="loader-dot"></div>
+    <div class="loader-dot"></div>
+    <div class="loader-dot"></div>
+  </div>
+
+  <!-- DARK MODE BUTTON -->
+  <button id="themeToggle" class="fixed bottom-6 right-6 p-3 bg-gray-800 dark:bg-gray-200 text-white dark:text-black rounded-full shadow-lg hover:scale-110 transition-all">🌙</button>
+
+  <!-- HEADER -->
+  <header class="backdrop-blur-md bg-white/50 dark:bg-gray-800/50 shadow sticky top-0 z-50">
+    <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-xl font-bold">José Guadalupe Estrada López</h1>
+      <nav class="space-x-6">
+        <a href="#inicio" class="hover:text-blue-600">Inicio</a>
+        <a href="#sobre-mi" class="hover:text-blue-600">Sobre mí</a>
+        <a href="#tecnologias" class="hover:text-blue-600">Tecnologías</a>
+        <a href="#proyectos" class="hover:text-blue-600">Proyectos</a>
+        <a href="#contacto" class="hover:text-blue-600">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- PARALLAX HERO -->
+  <section id="inicio" class="parallax h-[60vh] flex flex-col justify-center items-center text-center text-white" data-aos="fade-up">
+    <h2 class="text-5xl font-bold drop-shadow-lg">Hola, soy Guadalupe Estrada</h2>
+    <p class="text-xl mt-4 drop-shadow-lg">Ingeniero en Sistemas Computacionales recién egresado</p>
+  </section>
+
+  <!-- SOBRE MI -->
+  <section id="sobre-mi" class="max-w-5xl mx-auto px-6 py-20" data-aos="fade-right">
+    <h2 class="text-3xl font-bold mb-4">Sobre mí</h2>
+    <p class="text-lg leading-relaxed">Soy Ingeniero en Sistemas Computacionales recién egresado con experiencia en desarrollo web, APIs, bases de datos, análisis de requerimientos y proyectos institucionales.</p>
+  </section>
+
+  <!-- TECNOLOGIAS -->
+  <section id="tecnologias" class="bg-white dark:bg-gray-800 py-20">
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-10 text-center" data-aos="fade-up">Tecnologías</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 text-lg">
+        <div data-aos="zoom-in" class="hover:scale-105 transition-all">
+          <h3 class="font-semibold mb-2">Lenguajes</h3>
+          <ul class="list-disc ml-6"><li>Java</li><li>JavaScript</li><li>Python</li><li>PHP</li></ul>
+        </div>
+        <div data-aos="zoom-in" class="hover:scale-105 transition-all">
+          <h3 class="font-semibold mb-2">Front-end</h3>
+          <ul class="list-disc ml-6"><li>HTML</li><li>CSS</li><li>Tailwind CSS</li><li>Bootstrap</li><li>Vue.js</li></ul>
+        </div>
+        <div data-aos="zoom-in" class="hover:scale-105 transition-all">
+          <h3 class="font-semibold mb-2">Back-end</h3>
+          <ul class="list-disc ml-6"><li>FastAPI</li><li>PHP</li><li>MySQL</li><li>Supabase</li></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROYECTOS -->
+  <section id="proyectos" class="max-w-5xl mx-auto px-6 py-20">
+    <h2 class="text-3xl font-bold mb-12 text-center" data-aos="fade-up">Proyectos</h2>
+
+    <div class="space-y-12">
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow hover:scale-[1.02] transition-all sr-card">
+        <h3 class="text-2xl font-semibold">Sistema de Tutorías (2025)</h3>
+        <p class="mt-2">Rol: FullStack Developer.</p>
+        <a href="https://web-app-tutorias.vercel.app/" target="_blank" class="text-blue-500 hover:underline">
+            Tutorías ITSF
+        </a>
+      </div>
+
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow hover:scale-[1.02] transition-all sr-card">
+        <h3 class="text-2xl font-semibold">Comercio Fresnillo – Hackathon (2025)</h3>
+        <p class="mt-2">Rol: FullStack Developer.</p>
+        <a href="https://www.figma.com/make/IU8Lrm5zJzTTMz7BBYzrwW/FresnoShop-Marketplace-Development?node-id=0-1&p=f&fullscreen=1" target="_blank" class="text-blue-500 hover:underline">
+            Impulso al comercio Local en Fresnillo
+        </a>
+      </div>
+
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow hover:scale-[1.02] transition-all sr-card">
+        <h3 class="text-2xl font-semibold">Turismo Zacatecas – Hackathon (2025)</h3>
+        <p class="mt-2">Rol: FullStack Developer.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="bg-white dark:bg-gray-800 py-20" data-aos="fade-up">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-6">Contacto</h2>
+      <p class="text-lg">Correo: estradalopezjoseguadalupe32@gmail.com</p>
+      <p class="text-lg">Teléfono: +52 493 159 11 92</p>
+      <p class="text-lg">GitHub: github.com/Estraday345</p>
+    </div>
+  </section>
+
+  <footer class="text-center py-6 text-gray-600 dark:text-gray-400">
+    © 2025 José Guadalupe Estrada López — Portafolio Web
+  </footer>
+
+
+<script>
+    tailwind.config = { darkMode: 'class' }
+// --- LOADER: ocultar con transición ---
+window.addEventListener('load', () => {
+  const loader = document.getElementById('loader');
+  if (!loader) return;
+  loader.style.transition = 'opacity 300ms ease';
+  loader.style.opacity = '0';
+  setTimeout(() => loader.style.display = 'none', 350);
+});
+
+// --- THEME (light / dark) ---
+const htmlEl = document.documentElement;
+const themeToggleBtn = document.getElementById('themeToggle');
+
+// Cambiar icono del botón según el modo
+function updateThemeButton() {
+  if (htmlEl.classList.contains('dark')) {
+    themeToggleBtn.textContent = '☀️';
+  } else {
+    themeToggleBtn.textContent = '🌙';
+  }
+}
+
+// Cargar preferencia inicial
+(function () {
+  const saved = localStorage.getItem('theme');
+  if (saved === 'dark') {
+    htmlEl.classList.add('dark');
+  } else if (saved === 'light') {
+    htmlEl.classList.remove('dark');
+  } else {
+    // Preferencia del sistema
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (prefersDark) htmlEl.classList.add('dark');
+  }
+  updateThemeButton();
+})();
+
+// Evento de clic para cambiar modo
+themeToggleBtn.addEventListener('click', () => {
+  htmlEl.classList.toggle('dark');
+  if (htmlEl.classList.contains('dark')) {
+    localStorage.setItem('theme', 'dark');
+  } else {
+    localStorage.setItem('theme', 'light');
+  }
+  updateThemeButton();
+});
+
+// --- AOS INIT ---
+AOS.init({
+  duration: 900,
+  once: true,
+  easing: 'ease-out'
+});
+
+// --- SCROLLREVEAL INIT ---
+ScrollReveal().reveal('.sr-card', {
+  distance: "40px",
+  duration: 900,
+  easing: "ease-out",
+  origin: "bottom",
+  interval: 200,
+});
+</script>
+
